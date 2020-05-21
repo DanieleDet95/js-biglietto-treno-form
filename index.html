@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="wrapper-top">
+    <h1 class="titolo">CALCOLA IL PREZZO DEL BIGLIETTO</h1>
+    <div class="container-info">
+
+      <!-- NOME -->
+      <div class="nome">
+        <label>Nome Cognome</label><br>
+        <input id="form-nome" type="text" placeholder="Inserisci il tuo nome">
+      </div>
+
+      <!-- KILOMETRI -->
+      <div class="km">
+        <label>Km da percorrere</label><br>
+        <input id="form-km" type="number" placeholder="Inserisci i km">
+      </div>
+
+      <!-- ETA -->
+      <div class="eta">
+        <label>Fascia d'etá</label><br>
+        <select id="form-eta">
+          <option value="maggiorenne">Maggiorenne</option>
+          <option value="minorenne">Minorenne</option>
+          <option value="over">Over 65</option>
+        </select>
+      </div>
+
+      <!-- BOTTONI -->
+      <br>
+      <button id="genera">Genera</button>
+      <button id="reset">Annulla</button>
+    </div>
+  </div>
+
+  <!-- CONTENITORE BIGLIETTO -->
+  <div class="wrapper-bottom">
+    <h1 class="titolo">IL TUO BIGLIETTO</h1>
+
+    <div id="biglietto" class="container-biglietto hidden">
+      <h3>DETTAGLIO PASSEGGERI</h3>
+      <div class="biglietto">
+
+        <!-- PASSEGGERO -->
+        <div class="passeggero">
+          <p>NOME PASSEGGERO</p>
+          <p id="bigl-nome"></p>
+        </div>
+
+        <!-- OFFERTA -->
+        <div class="offerta">
+          <p class="sotto-titolo">Offerta</p>
+          <p id="bigl-offerta" class="risultato"></p>
+        </div>
+
+        <!-- CARROZZA -->
+        <div class="carrozza">
+          <p class="sotto-titolo">Carrozza</p>
+          <p id="bigl-carrozza" class="risultato"></p>
+        </div>
+
+        <!-- CODICE -->
+        <div class="codice">
+          <p class="sotto-titolo">Codice CP</p>
+          <p id="bigl-codice" class="risultato"></p>
+        </div>
+
+        <!-- COSTO -->
+        <div class="costo">
+          <p class="sotto-titolo">Costo biglietto</p>
+          <p id="bigl-costo" class="risultato"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Connessione JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>

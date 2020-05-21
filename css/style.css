@@ -1,0 +1,80 @@
+/* reset generale */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #B91450;
+}
+input,
+select{
+  border: 1px solid #B91450;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 20px;
+}
+button{
+  margin:0px 20px 20px 20px;
+  background-color: lightgray;
+  color: #B91450;
+  padding: 5px;
+  font-weight: bold;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.titolo{
+  color: white;
+  margin: 10px;
+  text-align: center;
+}
+
+/* Informazioni generali */
+.wrapper-top{
+  text-align: center;
+}
+.container-info{
+  background: white;
+  width: 80%;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px 2px black;
+}
+.nome,
+.km,
+.eta{
+  display: inline-block;
+  margin: 30px;
+  color: #B91450;
+}
+
+/* Il tuo biglietto */
+.container-biglietto{
+  width: 80%;
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+}
+.biglietto{
+  border: 1px solid black;
+  display: flex;
+}
+.passeggero{
+  background: gray;
+  padding: 20px;
+  width: 25%;
+  font-weight: bold;
+}
+.sotto-titolo{
+  font-weight: bold;
+  padding: 20px;
+}
+.risultato{
+  padding: 10px 20px 20px 20px;
+}
+.hidden{
+  display: none;
+}
+.visible{
+  display: block;
+}
