@@ -13,6 +13,13 @@ select{
   border-radius: 5px;
   padding: 5px;
   margin-top: 20px;
+  text-align: center;
+}
+input:focus{
+  background: lightgray;
+}
+select:focus{
+  background: lightgray;
 }
 button{
   margin:0px 20px 20px 20px;
@@ -72,9 +79,31 @@ button{
 .risultato{
   padding: 10px 20px 20px 20px;
 }
+.green{
+  color: #00ff00;
+}
 .hidden{
   display: none;
 }
 .visible{
   display: block;
+}
+
+/* Messaggio errore */
+#errore{
+  border: 1px solid red;
+  border-radius: 10px;
+  background-color: red;
+  text-align: center;
+  margin: 20px 50px 0px 50px;
+  padding: 5px;
+}
+
+#errorekm{
+  border: 1px solid red;
+  border-radius: 10px;
+  background-color: red;
+  text-align: center;
+  margin: 20px 50px 0px 50px;
+  padding: 5px;
 }
