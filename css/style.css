@@ -88,6 +88,24 @@ button{
 .visible{
   display: block;
 }
+@media screen and (max-width: 700px) {
+  .biglietto{
+    display: block;
+    text-align: center;
+  }
+  .passeggero{
+    width: 100%;
+  }
+  .sotto-titolo{
+    padding: 10px 0px 0px 0px;
+  }
+  .risultato{
+    padding: 5px 20px 15px 20px;
+  }
+  .km{
+    margin: 0px;
+  }
+}
 
 /* Messaggio errore */
 #errore{
