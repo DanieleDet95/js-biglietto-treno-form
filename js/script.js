@@ -21,8 +21,8 @@ genera.addEventListener('click',
 function() {
 
   // Dichiarazione valore variabili
-  var etaValue = document.getElementById('form-eta').value;
-  var kmValue = document.getElementById('form-km').value;
+  var etaValue = eta.value;
+  var kmValue = km.value;
   kmValue = parseInt(kmValue);
   var prezzo = kmValue * 0.21;
   var sconto;

@@ -30,6 +30,9 @@ button{
   border: 1px solid gray;
   border-radius: 5px;
 }
+.overflow{
+  word-wrap: break-word;
+}
 .titolo{
   color: white;
   margin: 10px;
