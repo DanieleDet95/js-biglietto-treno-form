@@ -26,6 +26,7 @@ function() {
   kmValue = parseInt(kmValue);
   var prezzo = kmValue * 0.21;
   var sconto;
+  biglietto.className = 'container-biglietto visible';
 
   // Calcolo sconto
   if ( (etaValue != 'minorenne') && (etaValue != 'over')) {
@@ -56,7 +57,7 @@ function() {
     errorekm.className = ' visible';
   } else if (kmValue) {
     prezzoBigl.innerHTML = prezzo.toFixed(2) + ' €';
-    prezzoBigl.className = prezzoBigl.classList + ' green';
+    prezzoBigl.className = 'risultato green';
     errorekm.className = ' hidden';
   } else {
     prezzoBigl.innerHTML = 'Errore';
@@ -78,6 +79,7 @@ function() {
     codiceBigl.innerHTML = 'Errore';
     prezzoBigl.innerHTML = 'Errore';
     nomeBigl.innerHTML = 'Errore';
+    prezzoBigl.className = 'risultato red';
     ripetizione = '0';
   } else {
     offertaBigl.innerHTML = sconto;
@@ -89,6 +91,7 @@ function() {
 // Impostazioni bottone reset
 reset.addEventListener('click',
 function() {
+  biglietto.className ='container-biglietto hidden';
   nome.value = '';
   km.value = '';
   prezzoBigl.innerHTML = '';
@@ -97,8 +100,8 @@ function() {
   carrozzaBigl.innerHTML = '';
   codiceBigl.innerHTML = '';
   eta.value = 'maggiorenne';
-  errore.className = 'hidden';
-  errorekm.className = 'hidden';
+  errore.className = ' hidden';
+  errorekm.className = ' hidden';
   ripetizione = '0';
 }
 );
