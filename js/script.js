@@ -7,6 +7,14 @@ var reset = document.getElementById('reset');
 var biglietto = document.getElementById('biglietto');
 var errore = document.getElementById('errore');
 var errorekm = document.getElementById('errorekm');
+var ripetizione = '0';
+
+// Variabil biglietto
+var prezzoBigl = document.getElementById('bigl-costo');
+var nomeBigl = document.getElementById('bigl-nome');
+var offertaBigl = document.getElementById('bigl-offerta')
+var carrozzaBigl = document.getElementById('bigl-carrozza');
+var codiceBigl = document.getElementById('bigl-codice');
 
 // Impostazioni bottone genera
 genera.addEventListener('click',
@@ -18,13 +26,6 @@ function() {
   kmValue = parseInt(kmValue);
   var prezzo = kmValue * 0.21;
   var sconto;
-
-  // Variabil biglietto
-  var prezzoBigl = document.getElementById('bigl-costo');
-  var nomeBigl = document.getElementById('bigl-nome');
-  var offertaBigl = document.getElementById('bigl-offerta')
-  var carrozzaBigl = document.getElementById('bigl-carrozza');
-  var codiceBigl = document.getElementById('bigl-codice');
 
   // Calcolo sconto
   if ( (etaValue != 'minorenne') && (etaValue != 'over')) {
@@ -62,6 +63,14 @@ function() {
     errorekm.className = ' visible';
   }
 
+  // Condizione per non generare codice continuo
+  console.log(ripetizione);
+  if (ripetizione == '0') {
+    carrozzaBigl.innerHTML = Math.floor((Math.random() * 10)+1);
+    codiceBigl.innerHTML = Math.floor(Math.random() * 10000);
+    ripetizione = '1';
+  }
+
   // Se esiste un errore mandare messaggio a tutti
   if (( !(isNaN(nome.value)) ) || ( isNaN(prezzo) )) {
     offertaBigl.innerHTML = 'Errore';
@@ -69,10 +78,9 @@ function() {
     codiceBigl.innerHTML = 'Errore';
     prezzoBigl.innerHTML = 'Errore';
     nomeBigl.innerHTML = 'Errore';
+    ripetizione = '0';
   } else {
     offertaBigl.innerHTML = sconto;
-    carrozzaBigl.innerHTML = Math.floor((Math.random() * 10)+1);
-    codiceBigl.innerHTML = Math.floor(Math.random() * 10000);
   }
 
  }
@@ -91,5 +99,6 @@ function() {
   eta.value = 'maggiorenne';
   errore.className = 'hidden';
   errorekm.className = 'hidden';
+  ripetizione = '0';
 }
 );
